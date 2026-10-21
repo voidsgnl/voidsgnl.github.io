@@ -3,117 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10120f">
-  <meta name="description" content="BishopSpace — a portfolio of software, experiments, and ideas by voidsgnl.">
-  <meta property="og:title" content="BishopSpace — Digital work, thoughtfully built">
-  <meta property="og:description" content="A home for software projects, creative experiments, and ideas in progress.">
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="BishopSpace — a digital world for ideas, experiments, and Tempus Veritus.">
+  <meta property="og:title" content="BishopSpace — Enter the unknown">
+  <meta property="og:description" content="One idea. Many layers. Explore Tempus Veritus inside BishopSpace.">
   <meta property="og:type" content="website">
-  <title>BishopSpace — Digital work, thoughtfully built</title>
+  <title>BishopSpace — Enter the unknown</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-aura" aria-hidden="true"></div>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="BishopSpace home">
-        <span class="brand-mark">B<span>.</span></span>
-        <span class="brand-name">Bishop<span>Space</span></span>
-      </a>
+      <a class="brand" href="#top" aria-label="BishopSpace home"><span class="brand-glyph">B<span>/</span></span><span>BISHOP<span class="brand-muted">SPACE</span></span></a>
+      <div class="top-status"><span class="live-dot"></span> INDEPENDENT DIGITAL SPACE</div>
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
-      <nav id="site-nav" class="nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#approach">Approach</a>
-        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-      </nav>
+      <nav id="site-nav" class="nav"><a href="#signal">THE SIGNAL</a><a href="#about">ABOUT</a><a href="#contact">CONTACT <span>↗</span></a></nav>
     </header>
 
     <main id="top">
-      <section class="hero section-wrap">
+      <section class="hero">
+        <div class="hero-index mono"><span>BS—001</span><span>YOU ARE SOMEWHERE NEW</span></div>
         <div class="hero-copy">
-          <div class="eyebrow"><span class="status-dot"></span> INDEPENDENT DEVELOPER · DIGITAL BUILDER</div>
-          <h1>Turning curious<br>ideas into <em>real things.</em></h1>
-          <p class="hero-lede">I build software at the intersection of useful tools and creative ideas. This is where the projects, experiments, and next big questions live.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#about">A little about me <span aria-hidden="true">↗</span></a>
+          <p class="eyebrow"><span class="eyebrow-mark">✳</span> A PERSONAL DIGITAL UNIVERSE</p>
+          <h1>Not just a<br>portfolio<span class="punctuation">.</span><br><span class="outline-text">A place to</span><br><em>explore.</em></h1>
+          <p class="hero-lede">Ideas don't have to live inside boxes. Welcome to a space for building strange things, asking better questions, and turning imagination into systems.</p>
+          <a class="enter-link" href="#signal"><span class="enter-icon">↓</span><span>DESCEND INTO THE SPACE</span><span class="enter-line"></span></a>
+        </div>
+        <div class="hero-world" aria-label="Interactive abstract digital space">
+          <div class="world-grid"></div><div class="world-rings ring-one"></div><div class="world-rings ring-two"></div><div class="world-rings ring-three"></div>
+          <div class="world-cross cross-a">+</div><div class="world-cross cross-b">×</div><div class="world-cross cross-c">+</div>
+          <div class="world-object" data-depth="0.06"><div class="object-core"><span>TV</span><i></i></div><div class="object-orbit orbit-a"></div><div class="object-orbit orbit-b"></div><div class="object-orbit orbit-c"></div><span class="object-coordinate coord-a">−13.9626 / 33.7741</span><span class="object-coordinate coord-b">SIGNAL DETECTED</span></div>
+          <div class="world-label label-a mono">FIG. 001 — AN IDEA TAKING FORM</div><div class="world-label label-b mono">MOVE YOUR CURSOR ↗</div>
+          <div class="world-marker marker-a"></div><div class="world-marker marker-b"></div>
+        </div>
+        <div class="hero-bottom mono"><span>MADE OF CURIOSITY</span><span>SCROLL TO ALTER REALITY ↓</span><span>BLANTYRE · MALAWI</span></div>
+        <div class="hero-side mono">AN OPEN SYSTEM / ALWAYS EVOLVING</div>
+      </section>
+
+      <section id="signal" class="signal-section section-wrap">
+        <div class="section-kicker mono"><span>01</span><span>THE SIGNAL</span><span class="kicker-rule"></span><span>ONE PROJECT IN ORBIT</span></div>
+        <div class="signal-intro"><h2>Something is<br>emerging<span class="punctuation">.</span></h2><p>Somewhere between the visible and the hidden, there are things worth finding. This is the current signal.</p></div>
+        <a class="project-object" href="https://github.com/voidsgnl/tempus-veritus" target="_blank" rel="noreferrer" aria-label="Explore Tempus Veritus on GitHub">
+          <div class="project-object-visual">
+            <div class="project-grid"></div><div class="scanline"></div>
+            <div class="tv-radar"><div class="radar-ring radar-one"></div><div class="radar-ring radar-two"></div><div class="radar-ring radar-three"></div><div class="radar-sweep"></div><div class="radar-center">TV<span>·</span></div><span class="radar-node node-one"></span><span class="radar-node node-two"></span><span class="radar-node node-three"></span></div>
+            <span class="project-visual-tag tag-left mono">FIELD NOTE / 001</span><span class="project-visual-tag tag-right mono">SEARCH BEYOND THE OBVIOUS</span>
+            <span class="project-visual-bottom mono">SURFACE ◇ DEPTH ◇ CONNECTION</span>
+            <span class="project-arrow">↗</span>
           </div>
-          <div class="hero-note"><span class="note-line"></span><span>Based in Malawi · Building for anywhere</span></div>
-        </div>
-        <div class="hero-art" aria-label="Abstract graphic representing ideas becoming connected systems" role="img">
-          <div class="art-grid"></div>
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="art-core"><span class="core-symbol">b<span>.</span></span><span class="core-caption">IDEAS → SYSTEMS</span></div>
-          <span class="float-tag tag-top">01 / EXPLORE</span>
-          <span class="float-tag tag-bottom">MAKE IT REAL <span>↗</span></span>
-          <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
-        </div>
-        <div class="hero-index"><span>PORTFOLIO / 2026</span><span>SCROLL TO DISCOVER ↓</span></div>
+          <div class="project-object-info"><div class="project-title-wrap"><span class="project-type mono">EXPLORATION ENGINE · IN DEVELOPMENT</span><h3>Tempus <em>Veritus</em></h3><p>An ambitious search concept for exploring information across the surface web and deeper, harder-to-discover corners of the internet.</p><div class="project-tags mono"><span>DISCOVERY</span><span>SEARCH</span><span>INTELLIGENCE</span></div></div><div class="project-open"><span>ENTER PROJECT</span><b>↗</b></div></div>
+        </a>
+        <div class="signal-foot mono"><span>ONE IDEA. MANY LAYERS.</span><span>THE WORK IS IN PROGRESS — SO IS THE SPACE.</span></div>
       </section>
 
-      <section id="work" class="work-section section-wrap section-pad">
-        <div class="section-heading">
-          <div><div class="eyebrow">SELECTED WORK <span class="eyebrow-line"></span></div><h2>Things I’m <em>building.</em></h2></div>
-          <p>A few projects exploring how software can solve problems, support creativity, and make ambitious ideas tangible.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card project-featured">
-            <a class="project-visual visual-animation" href="https://github.com/voidsgnl/stickfightstudio" target="_blank" rel="noreferrer" aria-label="View Animation Studio repository">
-              <div class="visual-top"><span>CREATIVE TOOLS</span><span>01 — 03</span></div>
-              <div class="animation-stage"><div class="stage-sun"></div><div class="stage-line"></div><div class="stick stick-a"><i></i><b></b><span></span></div><div class="stick stick-b"><i></i><b></b><span></span></div><div class="stage-play">↗</div></div>
-              <span class="visual-caption">MOTION / STORY / FRAME</span>
-            </a>
-            <div class="project-info"><div><h3>Animation Studio</h3><p>A creative workspace for building animated scenes, characters, and story-driven videos.</p></div><a class="round-link" href="https://github.com/voidsgnl/stickfightstudio" target="_blank" rel="noreferrer" aria-label="Open Animation Studio on GitHub">↗</a></div>
-            <div class="project-meta"><span>PYTHON</span><span>ANIMATION ENGINE</span><span>IN DEVELOPMENT</span></div>
-          </article>
-          <article class="project-card">
-            <a class="project-visual visual-market" href="https://github.com/voidsgnl/nova-marketplace" target="_blank" rel="noreferrer" aria-label="View Nova Marketplace repository">
-              <div class="visual-top"><span>COMMERCE / WEB</span><span>02 — 03</span></div>
-              <div class="market-window"><div class="window-head"><span>nova.</span><span>MARKETPLACE</span></div><div class="market-title">Find your<br><i>next favourite.</i></div><div class="market-products"><span class="product-shape shape-one"></span><span class="product-shape shape-two"></span><span class="product-shape shape-three"></span></div><div class="market-footer">DISCOVER MORE <span>↗</span></div></div>
-              <span class="visual-caption">DISCOVER / CHOOSE / CONNECT</span>
-            </a>
-            <div class="project-info"><div><h3>Nova Marketplace</h3><p>A marketplace experience focused on a clear storefront and a foundation that can scale.</p></div><a class="round-link" href="https://github.com/voidsgnl/nova-marketplace" target="_blank" rel="noreferrer" aria-label="Open Nova Marketplace on GitHub">↗</a></div>
-            <div class="project-meta"><span>NEXT.JS</span><span>MYSQL</span><span>WEB APP</span></div>
-          </article>
-          <article class="project-card">
-            <a class="project-visual visual-quantum" href="https://github.com/voidsgnl/secure-data-collector" target="_blank" rel="noreferrer" aria-label="View Secure Data Collector repository">
-              <div class="visual-top"><span>DATA / SECURITY</span><span>03 — 03</span></div>
-              <div class="data-art"><div class="data-ring ring-a"></div><div class="data-ring ring-b"></div><div class="data-node node-a"></div><div class="data-node node-b"></div><div class="data-node node-c"></div><div class="data-center">S<span>•</span></div><div class="data-label label-a">COLLECT</div><div class="data-label label-b">PROTECT</div></div>
-              <span class="visual-caption">SIGNAL IN / TRUST OUT</span>
-            </a>
-            <div class="project-info"><div><h3>Secure Data Collector</h3><p>A data-focused web application built around secure collection and a dashboard workflow.</p></div><a class="round-link" href="https://github.com/voidsgnl/secure-data-collector" target="_blank" rel="noreferrer" aria-label="Open Secure Data Collector on GitHub">↗</a></div>
-            <div class="project-meta"><span>TYPESCRIPT</span><span>NEXT.JS</span><span>SUPABASE</span></div>
-          </article>
-        </div>
-        <a class="all-work-link" href="https://github.com/voidsgnl?tab=repositories" target="_blank" rel="noreferrer">Explore more on GitHub <span>↗</span></a>
+      <section id="about" class="about-section">
+        <div class="section-wrap about-layout"><div class="section-kicker mono"><span>02</span><span>THE BUILDER</span></div><div class="about-content"><p class="eyebrow">WHO'S BEHIND THE SIGNAL?</p><h2>Curiosity is a<br><em>technical skill.</em></h2><p>I’m an independent developer drawn to the questions that don’t have obvious answers. I build software to explore ideas, make complex things tangible, and see what happens when imagination meets engineering.</p><p class="about-aside">BishopSpace is not a catalogue. It is a work in progress — an evolving environment for projects that deserve more than a thumbnail and a paragraph.</p><div class="about-coordinates mono"><span>STATUS: BUILDING</span><span>ORIGIN: MALAWI, EARTH</span><span>DESTINATION: UNKNOWN</span></div></div><div class="about-symbol" aria-hidden="true"><div class="symbol-ring"></div><div class="symbol-ring inner"></div><span>✳</span><small>KEEP LOOKING</small></div></div>
       </section>
 
-      <section id="about" class="about-section section-pad">
-        <div class="section-wrap about-layout">
-          <div class="about-label"><div class="eyebrow">A LITTLE CONTEXT</div><div class="about-number">01<span>/</span>03</div></div>
-          <div class="about-main"><h2>Curiosity is the<br>starting point. <em>Building is the proof.</em></h2><p class="about-body">I’m a developer who enjoys taking an idea from a rough sketch to something people can actually use. My interests span web applications, creative software, and systems that make complex work feel simpler.</p><p class="about-body muted">BishopSpace is my evolving corner of the internet: part portfolio, part workshop, and part record of what I’m learning by making.</p><a class="text-link" href="https://github.com/voidsgnl" target="_blank" rel="noreferrer">Follow the work on GitHub <span>↗</span></a></div>
-          <div class="about-stamp"><span>THINK</span><span class="stamp-star">✳</span><span>MAKE</span><span>REFINE</span></div>
-        </div>
-      </section>
+      <section class="manifesto section-wrap"><span class="manifesto-label mono">A SMALL MANIFESTO / 003</span><p>The internet is vast.<br>Most of it is <em>still unexplored.</em></p><span class="manifesto-mark">✳</span></section>
 
-      <section id="approach" class="approach-section section-wrap section-pad">
-        <div class="section-heading"><div><div class="eyebrow">HOW I WORK <span class="eyebrow-line"></span></div><h2>Build with <em>intention.</em></h2></div><p>Good software is more than a working demo. It needs a clear purpose, thoughtful details, and room to grow.</p></div>
-        <div class="principles">
-          <article><span class="principle-no">01</span><div><h3>Start with the problem</h3><p>Understand what needs to exist before deciding how to build it.</p></div><span class="principle-icon">↗</span></article>
-          <article><span class="principle-no">02</span><div><h3>Make the experience matter</h3><p>Design and usability are part of the product, not the finishing touches.</p></div><span class="principle-icon">✳</span></article>
-          <article><span class="principle-no">03</span><div><h3>Keep learning, keep shipping</h3><p>Build in small steps, learn from what happens, and improve what’s there.</p></div><span class="principle-icon">↻</span></article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <div class="section-wrap contact-inner"><div class="eyebrow"><span class="status-dot"></span> OPEN TO GOOD IDEAS</div><h2>Have something<br>in <em>mind?</em></h2><p>Have a project, a question, or an interesting problem to solve? Let’s start a conversation.</p><a class="button button-light" href="https://github.com/voidsgnl" target="_blank" rel="noreferrer">Connect on GitHub <span>↗</span></a><div class="contact-orbit" aria-hidden="true"><span>LET’S MAKE SOMETHING</span><b>✳</b></div></div>
-      </section>
+      <section id="contact" class="contact-section"><div class="section-wrap contact-inner"><div class="section-kicker mono"><span>03</span><span>MAKE CONTACT</span></div><p class="eyebrow"><span class="live-dot"></span> CHANNEL OPEN</p><h2>Have a signal<br>of your <em>own?</em></h2><p class="contact-copy">Interesting ideas get better when they collide. If you want to build, experiment, or explore a difficult question together, reach out.</p><a class="contact-link" href="https://github.com/voidsgnl" target="_blank" rel="noreferrer"><span>FIND ME ON GITHUB</span><b>↗</b></a><div class="contact-orbit" aria-hidden="true"><span>OPEN CHANNEL</span><i></i></div></div></section>
     </main>
-
-    <footer class="footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">B<span>.</span></span><span class="brand-name">Bishop<span>Space</span></span></a><span class="footer-note">A personal portfolio by <a href="https://github.com/voidsgnl" target="_blank" rel="noreferrer">@voidsgnl</a></span><div class="footer-right"><span>© <span id="year">2026</span> BISHOPSPACE</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+    <footer class="footer section-wrap mono"><a class="footer-brand" href="#top">BISHOP<span>/</span>SPACE</a><span>AN EXPERIMENT IN MAKING IDEAS REAL</span><div><span>© <span id="year">2026</span></span><a href="#top">RETURN TO ORIGIN ↑</a></div></footer>
   </div>
 </body>
 </html>
